@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "users",
+    "covoiturage",
+    "messaging",
 ]
 
 MIDDLEWARE = [
@@ -73,9 +76,13 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'comotorage',
+        'USER': 'postgres',
+        'PASSWORD': '@unico',  # Chacun remplace par son mot de passe
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
